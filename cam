@@ -17,4 +17,10 @@ pi:
 raspivid -n -ih -t 0 -rot 0 -w 1280 -h 720 -b 1000000 -fps 15 -o -|nc -lkv4 5001
 
 linux
-nc -l 192.168.0.101 5001 | mplayer -fps 200 -demuxer h264es -
+nc 192.168.0.101 5001 | mplayer -fps 200 -demuxer h264es -
+#192.168.0.101 is pi address
+
+
+refer:
+https://github.com/ShawnBaker/RPiCameraViewer
+https://www.raspberrypi.org/forums/viewtopic.php?t=87903
